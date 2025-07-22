@@ -218,11 +218,19 @@
     </div>
 
 
-    <!-- Right Side: Image -->
-    <div class="w-full lg:w-1/2 flex justify-center items-center mt-10 lg:mt-20 --text-color  lg:ml-40 lg:mb-0">
-      <img src="img/illustrations/black.svg"  fill="currentColor" alt="Illustration"
+      <!-- Light mode image (Black) -->
+    <div id="black-1" class="w-full lg:w-1/2 flex justify-center items-center mt-10 lg:mt-20 lg:ml-40 lg:mb-0">
+      <img src="img/illustrations/black.svg" alt="Illustration"
         class="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] object-contain" />
     </div>
+
+    <!-- Dark mode image (White Inverted) -->
+    <div id="white-1" class="hidden w-full lg:w-1/2 flex justify-center items-center mt-10 lg:mt-20 lg:ml-40 lg:mb-0">
+      <img src="img/illustrations/black.svg" alt="Illustration"
+        class="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] object-contain filter brightness-0 invert" />
+    </div>
+
+
 
   </section>
 
@@ -495,6 +503,32 @@
     document.body.classList.toggle('dark');
   });
 
+   const blackImgDiv = document.getElementById('black-1');
+  const whiteImgDiv = document.getElementById('white-1');
+
+  // Initial check on page load
+  function updateImagesByMode() {
+    const isDark = document.body.classList.contains('dark');
+    blackImgDiv.classList.toggle('hidden', isDark);
+    whiteImgDiv.classList.toggle('hidden', !isDark);
+  }
+
+  // Load saved theme from localStorage (optional)
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    darkModeToggle.checked = true;
+  }
+
+  // On toggle change
+  darkModeToggle.addEventListener('change', () => {
+ 
+    const isDarkNow = document.body.classList.contains("dark");
+    localStorage.setItem("theme", isDarkNow ? "dark" : "light");
+    updateImagesByMode();
+  });
+
+  updateImagesByMode(); // Run once on load
+
   const menuBtn = document.getElementById('menuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
 
@@ -506,6 +540,8 @@
     hamburgerIcon.classList.toggle('hidden');
     closeIcon.classList.toggle('hidden');
   });
+
+
 
 </script>
 
