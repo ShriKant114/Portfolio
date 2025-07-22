@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    :root {
+      --bg-color: #fffffb;
+      --text-color: #000000;
+      --header-bg: #f0f0f0;
+      --shadow-color: rgba(0, 0, 0, 0.2);
+      --main-color: rgb(21, 72, 225);
+      --curent-color: #000000;
+      --current-color-line: rgb(176, 176, 176);
+    }
+
+    body.dark {
+      --bg-color: rgb(0, 0, 0);
+      --text-color: #ffffff;
+      --header-bg: #1e1e1e;
+      --shadow-color: rgba(255, 255, 255, 0.1);
+      --main-color: rgb(216, 148, 23);
+      --current-color: #ffffff;
+      --current-color-line: rgb(255, 255, 255);
+    }
+
+
+    body {
+      font-family: 'Source Code Pro', monospace;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .navname {
+      color: var(--main-color);
+      transition: color 0.3s ease;
+      letter-spacing: 5px;
+    }
+
+    .hero-1 {
+      /* Animation start state */
+      transform: translateX(-100px);
+      opacity: 0;
+
+      /* Animation on load */
+      animation: slideInFromLeft 0.9s ease-out forwards;
+    }
+
+    @keyframes slideInFromLeft {
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+
+
+    .glow-card {
+      width: 370px;
+      height: 450px;
+      box-shadow: 0 0 5px 5px rgb(219, 229, 255);
+      overflow: hidden;
+    }
+
+    .image-container {
+      overflow: hidden;
+      border-radius: 0.5rem;
+    }
+
+    .image-hover {
+      width: 100%;
+      height: auto;
+      transition: transform 0.4s ease;
+    }
+
+    .image-container:hover .image-hover {
+      transform: scale(1.1);
+      /* zoom 10% */
+    }
+
+    .contact {
+      background-image: url('./img/illustrations/contact.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100vh;
+      /* Makes it fit the screen height */
+      overflow: hidden;
+    }
+
+
+    .contact {
+      height: 80vh;
+      clip-path: polygon(0 10%, 100% 0, 100% 80%, 0 100%);
+    }
+
+
+   
+
+  
+  </style>
+</head>
+
+<body>
+
+
+  <header class="w-full h-[75px] flex justify-between items-center shadow-lg px-4 md:px-10 relative z-50">
+    <!-- Name -->
+    <div class="text-[24px] md:text-[36px] ml-2 md:ml-5 font-bold navname">SHRIKANT</div>
+
+    <!-- Right Section -->
+    <div class="flex items-center gap-3 md:gap-6">
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex gap-8 text-[18px] md:text-[22px] font-code">
+        <a href="#" class="hover:text-gray-400">About</a>
+        <a href="#" class="hover:text-gray-400">Skills</a>
+        <a href="#" class="hover:text-gray-400">Project</a>
+        <a href="#" class="hover:text-gray-400">Contact</a>
+      </div>
+
+      <!-- Sun, Switch, Moon -->
+      <div class="flex items-center gap-2 md:gap-3 color-yellow">
+        <!-- Sun -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-500 dark:text-yello-400" viewBox="0 0 24 24"
+          fill="currentColor">
+          <path fill="currentColor" d="M5.64 17l-.71.71a1 1 0 000 1.41 1 1 0 001.41 0l.71-.71A1 1 0 005.64 17zM5 
+             12a1 1 0 00-1-1H3a1 1 0 000 2h1a1 1 0 001-1zm7-7a1 1 0 001-1V3a1 1 0 
+             00-2 0v1a1 1 0 001 1zM5.64 7.05a1 1 0 00.7.29 1 1 0 
+             00.71-.29 1 1 0 000-1.41l-.71-.71a1 1 0 
+             00-1.41 1.41zm12 .29a1 1 0 00.7-.29l.71-.71a1 1 0 
+             10-1.41-1.41l-.64.71a1 1 0 000 1.41 1 1 0 
+             00.66.29zM21 11h-1a1 1 0 000 2h1a1 1 0 
+             000-2zm-9 8a1 1 0 00-1 1v1a1 1 0 
+             002 0v-1a1 1 0 00-1-1zm6.36-2A1 1 0 
+             0017 18.36l.71.71a1 1 0 001.41 0 1 1 0 
+             000-1.41zM12 6.5a5.5 5.5 0 
+             105.5 5.5A5.51 5.51 0 0012 6.5zm0 9a3.5 3.5 0 
+             113.5-3.5 3.5 3.5 0 01-3.5 3.5z" />
+        </svg>
+
+        <!-- Toggle -->
+        <label for="modecheckbox" class="relative inline-block w-14 h-8">
+          <input type="checkbox" id="modecheckbox" class="peer sr-only">
+          <span class="absolute inset-0 bg-black peer-checked:bg-orange-400 rounded-full transition"></span>
+          <span
+            class="absolute left-1 top-1 w-6 h-6 bg-white rounded-full peer-checked:translate-x-6 transition"></span>
+        </label>
+
+        <!-- Moon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M21.64 13a1 1 0 00-1.05-.14 8.05 8.05 0 
+             01-3.37.73 8.15 8.15 0 01-8.14-8.1 8.59 8.59 0 
+             01.25-2A1 1 0 008 2.36a10.14 10.14 0 
+             1014 11.69 1 1 0 00-.36-1.05zm-9.5 
+             6.69A8.14 8.14 0 017.08 5.22v.27a10.15 10.15 0 
+             0010.14 10.14 9.79 9.79 0 002.1-.22 8.11 8.11 0 
+             01-7.18 4.32z" />
+        </svg>
+      </div>
+
+
+      <button id="menuBtn" class="md:hidden ml-2" style="color: var(--current-color);">
+        <!-- Hamburger Icon -->
+        <svg id="hamburgerIcon" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 block" viewBox="0 0 24 24"
+          fill="currentColor">
+          <path fill-rule="evenodd" d="M4 5h16v2H4V5zm0 6h16v2H4v-2zm0 6h16v2H4v-2z" clip-rule="evenodd" />
+        </svg>
+
+        <!-- Close (X) Icon -->
+        <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 hidden" viewBox="0 0 24 24"
+          fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M6.225 4.811a1 1 0 011.414 0L12 9.172l4.361-4.361a1 1 0 111.414 1.414L13.414 10.586l4.361 4.361a1 1 0 01-1.414 1.414L12 12l-4.361 4.361a1 1 0 01-1.414-1.414l4.361-4.361-4.361-4.361a1 1 0 010-1.414z"
+            clip-rule="evenodd" />
+        </svg>
+      </button>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden absolute top-[75px] left-0 w-full 
+         bg-white text-black mp-4
+         mx-1 font-bold text-center 
+         flex flex-col gap-4 py-4 text-lg font-code 
+         shadow-lg rounded-lg 
+         border border-gray-300 
+         z-40 dark:bg-white dark:text-black">
+
+        <a href="#" class="hover:text-gray-500">About</a>
+        <a href="#" class="hover:text-gray-500">Skills</a>
+        <a href="#" class="hover:text-gray-500">Project</a>
+        <a href="#" class="hover:text-gray-500">Contact</a>
+      </div>
+
+
+  </header>
+  <!-- Hero Section starts just below navbar -->
+  <section
+    class="hero-1 px-5 sm:px-10 lg:px-20 max-w-screen-xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between">
+
+    <!-- Left Side: Text -->
+    <div class="w-full lg:w-1/2 text-center lg:text-left flex flex-col items-center lg:items-start ">
+      <h1
+        class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r mt-10 from-[#e7008a] via-purple-500 to-blue-600 text-transparent bg-clip-text">
+        Hi, I'm
+      </h1>
+      <h2 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mt-2">
+        Shrikant Kushwaha
+      </h2>
+      <p class="w-full text-base sm:text-lg md:text-2xl mt-4">
+        I'm a computer engineering student and a software engineer in India.
+      </p>
+    </div>
+
+
+    <!-- Right Side: Image -->
+    <div class="w-full lg:w-1/2 flex justify-center items-center mt-10 lg:mt-20 --text-color  lg:ml-40 lg:mb-0">
+      <img src="img/illustrations/black.svg"  fill="currentColor" alt="Illustration"
+        class="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] object-contain" />
+    </div>
+
+  </section>
+
+
+
+  <br><br><br>
+
+
+
+
+  <section class="hero-2 flex flex-col justify-center items-center p-6">
+    <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">Skills</h2><br><br>
+
+    <div class="flex flex-wrap justify-center gap-6 max-w-6xl">
+      <!-- Example SVGs -->
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/HTML.svg" class="h-12 w-12 object-contain" alt="HTML" />
+      </div>
+
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/CSS.svg" class="h-12 w-12 object-contain" alt="ExpressJS" />
+      </div>
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/JS.svg" class="h-12 w-12 object-contain" alt="NodeJS" />
+      </div>
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/nodejs.svg" class="h-12 w-12 object-contain" alt="HTML" />
+      </div>
+
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/mongodb.svg" class="h-12 w-12 object-contain" alt="CSS" />
+      </div>
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/sql.svg" class="h-12 w-12 object-contain" alt="JavaScript" />
+      </div>
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/AWS.svg" class="h-12 w-12 object-contain" alt="MongoDB" />
+      </div>
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/CPP.svg" class="h-12 w-12 object-contain" alt="VSCode" />
+      </div>
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/PYTHON.svg" class="h-12 w-12 object-contain" alt="ExpressJS" />
+      </div>
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/nginx.svg" class="h-12 w-12 object-contain" alt="NodeJS" />
+      </div>
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/VSCODE.svg" class="h-12 w-12 object-contain" alt="HTML" />
+      </div>
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/leetcode.svg" class="h-12 w-12 object-contain" alt="CSS" />
+      </div>
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/express.svg" class="h-12 w-12 object-contain" alt="JavaScript" />
+      </div>
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/mysql.svg" class="h-12 w-12 object-contain" alt="MongoDB" />
+      </div>
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/nextjs.svg" class="h-12 w-12 object-contain" alt="ReactJS" />
+      </div>
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/java.svg" class="h-12 w-12 object-contain" alt="ReactJS" />
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="bg-color text-color py-12 px-6">
+    <!-- Section Title -->
+    <div class="flex items-center justify-center">
+      <h2 class="text-4xl font-bold mb-10 p-4 text-center">
+        Projects
+      </h2>
+    </div>
+
+    <!-- Card Grid Container -->
+    <div class="flex flex-wrap justify-center gap-10 max-w-[1200px] mx-auto">
+
+      <!-- Project Card -->
+      <div class="w-full sm:w-[80%] md:w-[45%] lg:w-[30%] rounded-xl p-5 border border-gray-300 glow-card shadow-lg">
+        <!-- Image -->
+        <div class="overflow-hidden rounded-md">
+          <img src="img/Projectimages/simon-game.png" alt="Monster Hunt"
+            class="w-full h-auto transition-transform duration-300 hover:scale-105">
+        </div>
+
+        <!-- Title -->
+        <h2 class="mt-4 font-bold text-[25px] md:text-[25px]">Feel Free Share</h2>
+
+        <!-- Description -->
+        <p class="mt-2 text-[20px] md:text-[20px] ">
+          A file sharing web app where you can share files securely without login or signup. <br>
+        </p>
+
+        <!-- Tags + Icons -->
+        <div class="mt-6 flex justify-between items-center flex-wrap gap-3">
+          <!-- Tags -->
+          <div class="text-sm text--text-color">HTML CSS Node.js SQL</div>
+
+
+
+
+          <!-- Icons -->
+          <div class="flex items-center space-x-5">
+            <!-- External Link -->
+            <a href="#" target="_blank" class="hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818" class="h-6 w-6" fill="currentColor">
+                <g>
+                  <path
+                    d="M185.818 2.161h-57.04c-4.971 0-9 4.029-9 9s4.029 9 9 9h35.312l-86.3 86.3a9 9 0 006.364 15.364 8.975 8.975 0 006.364-2.636l86.3-86.3v35.313c0 4.971 4.029 9 9 9s9-4.029 9-9v-57.04a9 9 0 00-9-9.001z">
+                  </path>
+                  <path
+                    d="M149 77.201a9 9 0 00-9 9v88.456H18v-122h93.778c4.971 0 9-4.029 9-9s-4.029-9-9-9H9a9 9 0 00-9 9v140a9 9 0 009 9h140a9 9 0 009-9V86.201a9 9 0 00-9-9z">
+                  </path>
+                </g>
+              </svg>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com" target="_blank" class="hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0.297C5.373 0.297 0 5.67 0 12.297c0 5.284 3.438 9.773 8.207 11.387.6.11.793-.26.793-.577v-2.234c-3.338.726-4.033-1.415-4.033-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.809 1.304 3.495.997.107-.776.418-1.305.762-1.605-2.665-.303-5.467-1.332-5.467-5.932 0-1.31.467-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.323 3.301 1.23a11.49 11.49 0 0 1 3.003-.404c1.018.005 2.043.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.655 1.653.243 2.874.12 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.807 5.625-5.479 5.921.43.37.823 1.103.823 2.222v3.293c0 .32.192.694.801.576C20.565 22.065 24 17.577 24 12.297 24 5.67 18.627.297 12 .297z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+    </div>
+  </section>
+
+
+  <!-- Contact -->
+  <div class="contact-1 contact w-screen flex items-center justify-center px-4 py-10 relative mt-15">
+    <div class="w-full max-w-md">
+
+      <form action="" method="POST" class="p-8 rounded-lg space-y-4">
+
+        <h2 class="text-2xl font-bold mb-4 text-white">We need to talk!</h2>
+
+        <input type="text" placeholder="Your full name" required
+          class="w-full p-4 mb-4 rounded bg-white border-0 border-none focus:outline-none  transition duration-300">
+
+        <input type="email" placeholder="example@xyz.com" required
+          class="w-full p-4 mb-4 rounded bg-white border-0 focus:border-3 border-none focus:outline-none  transition duration-300">
+
+        <textarea rows="5" placeholder="Type your thought.." required
+          class="w-full p-4 mb-4 rounded bg-white border-0 border-none focus:outline-none transition duration-300"></textarea>
+
+        <div class="flex justify-center">
+          <button type="submit"
+            class="w-half whitespace-nowrap bg-green-500 text-white p-4 rounded hover:bg-[rgb(10,153,0)] dark:hover:bg-green-400 transition duration-300">
+            Submit your response
+          </button>
+        </div>
+
+
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Responsive Social Icons (mobile: above footer, desktop: sidebar) -->
+  <div class="md:hidden flex justify-center space-x-6 my-6 gap-8">
+    <!-- GitHub -->
+    <a href="https://github.com" target="_blank" class="hover:scale-150 transition-transform duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M12 0.297C5.373 0.297 0 5.67 0 12.297c0 5.284 3.438 9.773 8.207 11.387.6.11.793-.26.793-.577v-2.234c-3.338.726-4.033-1.415-4.033-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.809 1.304 3.495.997.107-.776.418-1.305.762-1.605-2.665-.303-5.467-1.332-5.467-5.932 0-1.31.467-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.323 3.301 1.23a11.49 11.49 0 0 1 3.003-.404c1.018.005 2.043.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.655 1.653.243 2.874.12 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.807 5.625-5.479 5.921.43.37.823 1.103.823 2.222v3.293c0 .32.192.694.801.576C20.565 22.065 24 17.577 24 12.297 24 5.67 18.627.297 12 .297z" />
+      </svg>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://linkedin.com" target="_blank" class="hover:scale-150 transition-transform duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M4.98 3.5c0 1.38-1.11 2.5-2.48 2.5C1.12 6 0 4.88 0 3.5 0 2.12 1.12 1 2.5 1c1.37 0 2.48 1.12 2.48 2.5zM.24 8.98h4.55V24H.24V8.98zm7.56 0h4.36v2.05h.06c.61-1.15 2.1-2.36 4.33-2.36 4.63 0 5.48 3.05 5.48 7.02V24h-4.55v-6.99c0-1.67-.03-3.82-2.33-3.82-2.34 0-2.7 1.83-2.7 3.71V24H7.8V8.98z" />
+      </svg>
+    </a>
+
+    <!-- Twitter -->
+    <a href="https://twitter.com" target="_blank" class="hover:scale-150 transition-transform duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M24 4.56c-.89.39-1.84.65-2.84.77a4.92 4.92 0 0 0 2.15-2.71 9.86 9.86 0 0 1-3.13 1.2 4.93 4.93 0 0 0-8.39 4.49A14 14 0 0 1 1.67 3.15 4.93 4.93 0 0 0 3.18 9.7a4.9 4.9 0 0 1-2.23-.62v.06a4.93 4.93 0 0 0 3.95 4.83 4.93 4.93 0 0 1-2.22.08 4.93 4.93 0 0 0 4.6 3.42A9.87 9.87 0 0 1 0 21.54 13.94 13.94 0 0 0 7.56 24c9.05 0 14-7.5 14-14v-.64a10 10 0 0 0 2.44-2.55z" />
+      </svg>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://twitter.com" target="_blank" class="hover:scale-150 transition-transform duration-300">
+      <svg class="h-7 w-7 " viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <title>Instagram icon</title>
+        <path
+          d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+      </svg>
+    </a>
+  </div>
+
+
+  <footer class="bg-color text-center py-4 w-full mb-3 mt-2">
+    <p class="text-[18px] text-color text-sm flex flex-col sm:flex-row justify-center items-center gap-1">
+      <span>Copyright © Shrikant Kushwaha</span>
+      <span class="hidden sm:inline">|</span>
+      <span>Made with 💖 in India.</span>
+    </p>
+  </footer>
+
+
+
+  <!-- Social Icons Sidebar -->
+  <div class=" hidden md:flex fixed bottom-0 left-8 flex flex-col items-center space-y-6">
+
+    <!-- GitHub -->
+    <a href="https://github.com" target="_blank" class="hover:scale-150 transition-transform duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 " fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M12 0.297C5.373 0.297 0 5.67 0 12.297c0 5.284 3.438 9.773 8.207 11.387.6.11.793-.26.793-.577v-2.234c-3.338.726-4.033-1.415-4.033-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.809 1.304 3.495.997.107-.776.418-1.305.762-1.605-2.665-.303-5.467-1.332-5.467-5.932 0-1.31.467-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.323 3.301 1.23a11.49 11.49 0 0 1 3.003-.404c1.018.005 2.043.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.655 1.653.243 2.874.12 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.807 5.625-5.479 5.921.43.37.823 1.103.823 2.222v3.293c0 .32.192.694.801.576C20.565 22.065 24 17.577 24 12.297 24 5.67 18.627.297 12 .297z" />
+      </svg>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://linkedin.com" target="_blank" class="hover:scale-150 transition-transform duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M4.98 3.5c0 1.38-1.11 2.5-2.48 2.5C1.12 6 0 4.88 0 3.5 0 2.12 1.12 1 2.5 1c1.37 0 2.48 1.12 2.48 2.5zM.24 8.98h4.55V24H.24V8.98zm7.56 0h4.36v2.05h.06c.61-1.15 2.1-2.36 4.33-2.36 4.63 0 5.48 3.05 5.48 7.02V24h-4.55v-6.99c0-1.67-.03-3.82-2.33-3.82-2.34 0-2.7 1.83-2.7 3.71V24H7.8V8.98z" />
+      </svg>
+    </a>
+
+    <!-- Twitter -->
+    <a href="https://twitter.com" target="_blank" class="hover:scale-150 transition-transform duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 " fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M24 4.56c-.89.39-1.84.65-2.84.77a4.92 4.92 0 0 0 2.15-2.71 9.86 9.86 0 0 1-3.13 1.2 4.93 4.93 0 0 0-8.39 4.49A14 14 0 0 1 1.67 3.15 4.93 4.93 0 0 0 3.18 9.7a4.9 4.9 0 0 1-2.23-.62v.06a4.93 4.93 0 0 0 3.95 4.83 4.93 4.93 0 0 1-2.22.08 4.93 4.93 0 0 0 4.6 3.42A9.87 9.87 0 0 1 0 21.54 13.94 13.94 0 0 0 7.56 24c9.05 0 14-7.5 14-14v-.64a10 10 0 0 0 2.44-2.55z" />
+      </svg>
+    </a>
+    <!-- Instagram -->
+    <a href="https://twitter.com" target="_blank" class="hover:scale-150 transition-transform duration-300">
+      <svg class="h-7 w-7 " viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <title>Instagram icon</title>
+        <path
+          d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+      </svg>
+    </a>
+
+
+    <!-- Vertical Line -->
+    <div style="width: 3px; height: 75px;  background-color: var(--current-color-line);   " class="mt-2"
+      fill="currentColor"></div>
+
+  </div>
+
+
+
+
+</body>
+
+<script>
+  const darkModeToggle = document.getElementById('modecheckbox');
+  darkModeToggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark');
+  });
+
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  const hamburgerIcon = document.getElementById('hamburgerIcon');
+  const closeIcon = document.getElementById('closeIcon');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    hamburgerIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  });
+
+</script>
+
+
+</html>
