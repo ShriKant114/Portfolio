@@ -100,9 +100,6 @@
       clip-path: polygon(0 10%, 100% 0, 100% 80%, 0 100%);
     }
 
-
-   
-
   
   </style>
 </head>
@@ -118,10 +115,10 @@
     <div class="flex items-center gap-3 md:gap-6">
       <!-- Desktop Navigation -->
       <div class="hidden md:flex gap-8 text-[18px] md:text-[22px] font-code">
-        <a href="#" class="hover:text-gray-400">About</a>
-        <a href="#" class="hover:text-gray-400">Skills</a>
-        <a href="#" class="hover:text-gray-400">Project</a>
-        <a href="#" class="hover:text-gray-400">Contact</a>
+        <a href="#about" class="hover:text-gray-400">About</a>
+        <a href="#skills" class="hover:text-gray-400">Skills</a>
+        <a href="#project" class="hover:text-gray-400">Project</a>
+        <a href="#contact" class="hover:text-gray-400">Contact</a>
       </div>
 
       <!-- Sun, Switch, Moon -->
@@ -191,17 +188,16 @@
          border border-gray-300 
          z-40 dark:bg-white dark:text-black">
 
-        <a href="#" class="hover:text-gray-500">About</a>
-        <a href="#" class="hover:text-gray-500">Skills</a>
-        <a href="#" class="hover:text-gray-500">Project</a>
-        <a href="#" class="hover:text-gray-500">Contact</a>
+        <a href="#about" class="hover:text-gray-500">About</a>
+        <a href="#skills" class="hover:text-gray-500">Skills</a>
+        <a href="#project" class="hover:text-gray-500">Project</a>
+        <a href="#contact" class="hover:text-gray-500">Contact</a>
       </div>
 
 
   </header>
   <!-- Hero Section starts just below navbar -->
-  <section
-    class="hero-1 px-5 sm:px-10 lg:px-20 max-w-screen-xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between">
+  <section id="about" class=" hero-1 px-5 sm:px-10 lg:px-20 max-w-screen-xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between">
 
     <!-- Left Side: Text -->
     <div class="w-full lg:w-1/2 text-center lg:text-left flex flex-col items-center lg:items-start ">
@@ -241,67 +237,129 @@
 
 
 
-  <section class="hero-2 flex flex-col justify-center items-center p-6">
-    <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">Skills</h2><br><br>
+  <section id="skills" class="flex flex-col justify-center items-center p-6">
+  <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">Skills</h2><br>
 
-    <div class="flex flex-wrap justify-center gap-6 max-w-6xl">
-      <!-- Example SVGs -->
+  <div class="flex flex-wrap justify-center gap-6 max-w-6xl">
+    <!-- Skill Item Template -->
+    <div class="flex flex-col items-center">
       <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
         <img src="img/ICON/HTML.svg" class="h-12 w-12 object-contain" alt="HTML" />
       </div>
-
-      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
-        <img src="img/ICON/CSS.svg" class="h-12 w-12 object-contain" alt="ExpressJS" />
-      </div>
-      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
-        <img src="img/ICON/JS.svg" class="h-12 w-12 object-contain" alt="NodeJS" />
-      </div>
-      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
-        <img src="img/ICON/nodejs.svg" class="h-12 w-12 object-contain" alt="HTML" />
-      </div>
-
-      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
-        <img src="img/ICON/mongodb.svg" class="h-12 w-12 object-contain" alt="CSS" />
-      </div>
-      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
-        <img src="img/ICON/sql.svg" class="h-12 w-12 object-contain" alt="JavaScript" />
-      </div>
-      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
-        <img src="img/ICON/AWS.svg" class="h-12 w-12 object-contain" alt="MongoDB" />
-      </div>
-      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
-        <img src="img/ICON/CPP.svg" class="h-12 w-12 object-contain" alt="VSCode" />
-      </div>
-      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
-        <img src="img/ICON/PYTHON.svg" class="h-12 w-12 object-contain" alt="ExpressJS" />
-      </div>
-      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
-        <img src="img/ICON/nginx.svg" class="h-12 w-12 object-contain" alt="NodeJS" />
-      </div>
-      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
-        <img src="img/ICON/VSCODE.svg" class="h-12 w-12 object-contain" alt="HTML" />
-      </div>
-      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
-        <img src="img/ICON/leetcode.svg" class="h-12 w-12 object-contain" alt="CSS" />
-      </div>
-      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
-        <img src="img/ICON/express.svg" class="h-12 w-12 object-contain" alt="JavaScript" />
-      </div>
-      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
-        <img src="img/ICON/mysql.svg" class="h-12 w-12 object-contain" alt="MongoDB" />
-      </div>
-      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
-        <img src="img/ICON/nextjs.svg" class="h-12 w-12 object-contain" alt="ReactJS" />
-      </div>
-      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
-        <img src="img/ICON/java.svg" class="h-12 w-12 object-contain" alt="ReactJS" />
-      </div>
-
+      <p class="mt-2 text-sm text-center">HTML</p>
     </div>
-  </section>
+
+    <div class="flex flex-col items-center">
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/CSS.svg" class="h-12 w-12 object-contain" alt="CSS" />
+      </div>
+      <p class="mt-2 text-sm text-center">CSS</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/JS.svg" class="h-12 w-12 object-contain" alt="JavaScript" />
+      </div>
+      <p class="mt-2 text-sm text-center">JavaScript</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/nodejs.svg" class="h-12 w-12 object-contain" alt="NodeJS" />
+      </div>
+      <p class="mt-2 text-sm text-center">NodeJS</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/mongodb.svg" class="h-12 w-12 object-contain" alt="MongoDB" />
+      </div>
+      <p class="mt-2 text-sm text-center">MongoDB</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/sql.svg" class="h-12 w-12 object-contain" alt="SQL" />
+      </div>
+      <p class="mt-2 text-sm text-center">SQL</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/AWS.svg" class="h-12 w-12 object-contain" alt="AWS" />
+      </div>
+      <p class="mt-2 text-sm text-center">AWS</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/CPP.svg" class="h-12 w-12 object-contain" alt="C++" />
+      </div>
+      <p class="mt-2 text-sm text-center">C++</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/PYTHON.svg" class="h-12 w-12 object-contain" alt="Python" />
+      </div>
+      <p class="mt-2 text-sm text-center">Python</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/nginx.svg" class="h-12 w-12 object-contain" alt="Nginx" />
+      </div>
+      <p class="mt-2 text-sm text-center">Nginx</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/VSCODE.svg" class="h-12 w-12 object-contain" alt="VS Code" />
+      </div>
+      <p class="mt-2 text-sm text-center">VS Code</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/leetcode.svg" class="h-12 w-12 object-contain" alt="LeetCode" />
+      </div>
+      <p class="mt-2 text-sm text-center">LeetCode</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/express.svg" class="h-12 w-12 object-contain" alt="ExpressJS" />
+      </div>
+      <p class="mt-2 text-sm text-center">ExpressJS</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/mysql.svg" class="h-12 w-12 object-contain" alt="MySQL" />
+      </div>
+      <p class="mt-2 text-sm text-center">MySQL</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/nextjs.svg" class="h-12 w-12 object-contain" alt="NextJS" />
+      </div>
+      <p class="mt-2 text-sm text-center">NextJS</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+        <img src="img/ICON/java.svg" class="h-12 w-12 object-contain" alt="Java" />
+      </div>
+      <p class="mt-2 text-sm text-center">Java</p>
+    </div>
+
+  </div>
+</section>
 
 
-  <section class="bg-color text-color py-12 px-6">
+
+  <section id="project"  class=" bg-color text-color py-12 px-6">
     <!-- Section Title -->
     <div class="flex items-center justify-center">
       <h2 class="text-4xl font-bold mb-10 p-4 text-center">
@@ -311,6 +369,317 @@
 
     <!-- Card Grid Container -->
     <div class="flex flex-wrap justify-center gap-10 max-w-[1200px] mx-auto">
+
+      <!-- Project Card -->
+      <div class="w-full sm:w-[80%] md:w-[45%] lg:w-[30%] rounded-xl p-5 border border-gray-300 glow-card shadow-lg">
+        <!-- Image -->
+        <div class="overflow-hidden rounded-md">
+          <img src="img/Projectimages/simon-game.png" alt="Monster Hunt"
+            class="w-full h-auto transition-transform duration-300 hover:scale-105">
+        </div>
+
+        <!-- Title -->
+        <h2 class="mt-4 font-bold text-[25px] md:text-[25px]">Feel Free Share</h2>
+
+        <!-- Description -->
+        <p class="mt-2 text-[20px] md:text-[20px] ">
+          A file sharing web app where you can share files securely without login or signup. <br>
+        </p>
+
+        <!-- Tags + Icons -->
+        <div class="mt-6 flex justify-between items-center flex-wrap gap-3">
+          <!-- Tags -->
+          <div class="text-sm text--text-color">HTML CSS Node.js SQL</div>
+
+
+
+
+          <!-- Icons -->
+          <div class="flex items-center space-x-5">
+            <!-- External Link -->
+            <a href="#" target="_blank" class="hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818" class="h-6 w-6" fill="currentColor">
+                <g>
+                  <path
+                    d="M185.818 2.161h-57.04c-4.971 0-9 4.029-9 9s4.029 9 9 9h35.312l-86.3 86.3a9 9 0 006.364 15.364 8.975 8.975 0 006.364-2.636l86.3-86.3v35.313c0 4.971 4.029 9 9 9s9-4.029 9-9v-57.04a9 9 0 00-9-9.001z">
+                  </path>
+                  <path
+                    d="M149 77.201a9 9 0 00-9 9v88.456H18v-122h93.778c4.971 0 9-4.029 9-9s-4.029-9-9-9H9a9 9 0 00-9 9v140a9 9 0 009 9h140a9 9 0 009-9V86.201a9 9 0 00-9-9z">
+                  </path>
+                </g>
+              </svg>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com" target="_blank" class="hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0.297C5.373 0.297 0 5.67 0 12.297c0 5.284 3.438 9.773 8.207 11.387.6.11.793-.26.793-.577v-2.234c-3.338.726-4.033-1.415-4.033-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.809 1.304 3.495.997.107-.776.418-1.305.762-1.605-2.665-.303-5.467-1.332-5.467-5.932 0-1.31.467-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.323 3.301 1.23a11.49 11.49 0 0 1 3.003-.404c1.018.005 2.043.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.655 1.653.243 2.874.12 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.807 5.625-5.479 5.921.43.37.823 1.103.823 2.222v3.293c0 .32.192.694.801.576C20.565 22.065 24 17.577 24 12.297 24 5.67 18.627.297 12 .297z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="w-full sm:w-[80%] md:w-[45%] lg:w-[30%] rounded-xl p-5 border border-gray-300 glow-card shadow-lg">
+        <!-- Image -->
+        <div class="overflow-hidden rounded-md">
+          <img src="img/Projectimages/simon-game.png" alt="Monster Hunt"
+            class="w-full h-auto transition-transform duration-300 hover:scale-105">
+        </div>
+
+        <!-- Title -->
+        <h2 class="mt-4 font-bold text-[25px] md:text-[25px]">Feel Free Share</h2>
+
+        <!-- Description -->
+        <p class="mt-2 text-[20px] md:text-[20px] ">
+          A file sharing web app where you can share files securely without login or signup. <br>
+        </p>
+
+        <!-- Tags + Icons -->
+        <div class="mt-6 flex justify-between items-center flex-wrap gap-3">
+          <!-- Tags -->
+          <div class="text-sm text--text-color">HTML CSS Node.js SQL</div>
+
+
+
+
+          <!-- Icons -->
+          <div class="flex items-center space-x-5">
+            <!-- External Link -->
+            <a href="#" target="_blank" class="hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818" class="h-6 w-6" fill="currentColor">
+                <g>
+                  <path
+                    d="M185.818 2.161h-57.04c-4.971 0-9 4.029-9 9s4.029 9 9 9h35.312l-86.3 86.3a9 9 0 006.364 15.364 8.975 8.975 0 006.364-2.636l86.3-86.3v35.313c0 4.971 4.029 9 9 9s9-4.029 9-9v-57.04a9 9 0 00-9-9.001z">
+                  </path>
+                  <path
+                    d="M149 77.201a9 9 0 00-9 9v88.456H18v-122h93.778c4.971 0 9-4.029 9-9s-4.029-9-9-9H9a9 9 0 00-9 9v140a9 9 0 009 9h140a9 9 0 009-9V86.201a9 9 0 00-9-9z">
+                  </path>
+                </g>
+              </svg>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com" target="_blank" class="hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0.297C5.373 0.297 0 5.67 0 12.297c0 5.284 3.438 9.773 8.207 11.387.6.11.793-.26.793-.577v-2.234c-3.338.726-4.033-1.415-4.033-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.809 1.304 3.495.997.107-.776.418-1.305.762-1.605-2.665-.303-5.467-1.332-5.467-5.932 0-1.31.467-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.323 3.301 1.23a11.49 11.49 0 0 1 3.003-.404c1.018.005 2.043.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.655 1.653.243 2.874.12 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.807 5.625-5.479 5.921.43.37.823 1.103.823 2.222v3.293c0 .32.192.694.801.576C20.565 22.065 24 17.577 24 12.297 24 5.67 18.627.297 12 .297z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Project Card -->
+      <div class="w-full sm:w-[80%] md:w-[45%] lg:w-[30%] rounded-xl p-5 border border-gray-300 glow-card shadow-lg">
+        <!-- Image -->
+        <div class="overflow-hidden rounded-md">
+          <img src="img/Projectimages/simon-game.png" alt="Monster Hunt"
+            class="w-full h-auto transition-transform duration-300 hover:scale-105">
+        </div>
+
+        <!-- Title -->
+        <h2 class="mt-4 font-bold text-[25px] md:text-[25px]">Feel Free Share</h2>
+
+        <!-- Description -->
+        <p class="mt-2 text-[20px] md:text-[20px] ">
+          A file sharing web app where you can share files securely without login or signup. <br>
+        </p>
+
+        <!-- Tags + Icons -->
+        <div class="mt-6 flex justify-between items-center flex-wrap gap-3">
+          <!-- Tags -->
+          <div class="text-sm text--text-color">HTML CSS Node.js SQL</div>
+
+
+
+
+          <!-- Icons -->
+          <div class="flex items-center space-x-5">
+            <!-- External Link -->
+            <a href="#" target="_blank" class="hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818" class="h-6 w-6" fill="currentColor">
+                <g>
+                  <path
+                    d="M185.818 2.161h-57.04c-4.971 0-9 4.029-9 9s4.029 9 9 9h35.312l-86.3 86.3a9 9 0 006.364 15.364 8.975 8.975 0 006.364-2.636l86.3-86.3v35.313c0 4.971 4.029 9 9 9s9-4.029 9-9v-57.04a9 9 0 00-9-9.001z">
+                  </path>
+                  <path
+                    d="M149 77.201a9 9 0 00-9 9v88.456H18v-122h93.778c4.971 0 9-4.029 9-9s-4.029-9-9-9H9a9 9 0 00-9 9v140a9 9 0 009 9h140a9 9 0 009-9V86.201a9 9 0 00-9-9z">
+                  </path>
+                </g>
+              </svg>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com" target="_blank" class="hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0.297C5.373 0.297 0 5.67 0 12.297c0 5.284 3.438 9.773 8.207 11.387.6.11.793-.26.793-.577v-2.234c-3.338.726-4.033-1.415-4.033-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.809 1.304 3.495.997.107-.776.418-1.305.762-1.605-2.665-.303-5.467-1.332-5.467-5.932 0-1.31.467-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.323 3.301 1.23a11.49 11.49 0 0 1 3.003-.404c1.018.005 2.043.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.655 1.653.243 2.874.12 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.807 5.625-5.479 5.921.43.37.823 1.103.823 2.222v3.293c0 .32.192.694.801.576C20.565 22.065 24 17.577 24 12.297 24 5.67 18.627.297 12 .297z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Project Card -->
+      <div class="w-full sm:w-[80%] md:w-[45%] lg:w-[30%] rounded-xl p-5 border border-gray-300 glow-card shadow-lg">
+        <!-- Image -->
+        <div class="overflow-hidden rounded-md">
+          <img src="img/Projectimages/simon-game.png" alt="Monster Hunt"
+            class="w-full h-auto transition-transform duration-300 hover:scale-105">
+        </div>
+
+        <!-- Title -->
+        <h2 class="mt-4 font-bold text-[25px] md:text-[25px]">Feel Free Share</h2>
+
+        <!-- Description -->
+        <p class="mt-2 text-[20px] md:text-[20px] ">
+          A file sharing web app where you can share files securely without login or signup. <br>
+        </p>
+
+        <!-- Tags + Icons -->
+        <div class="mt-6 flex justify-between items-center flex-wrap gap-3">
+          <!-- Tags -->
+          <div class="text-sm text--text-color">HTML CSS Node.js SQL</div>
+
+
+
+
+          <!-- Icons -->
+          <div class="flex items-center space-x-5">
+            <!-- External Link -->
+            <a href="#" target="_blank" class="hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818" class="h-6 w-6" fill="currentColor">
+                <g>
+                  <path
+                    d="M185.818 2.161h-57.04c-4.971 0-9 4.029-9 9s4.029 9 9 9h35.312l-86.3 86.3a9 9 0 006.364 15.364 8.975 8.975 0 006.364-2.636l86.3-86.3v35.313c0 4.971 4.029 9 9 9s9-4.029 9-9v-57.04a9 9 0 00-9-9.001z">
+                  </path>
+                  <path
+                    d="M149 77.201a9 9 0 00-9 9v88.456H18v-122h93.778c4.971 0 9-4.029 9-9s-4.029-9-9-9H9a9 9 0 00-9 9v140a9 9 0 009 9h140a9 9 0 009-9V86.201a9 9 0 00-9-9z">
+                  </path>
+                </g>
+              </svg>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com" target="_blank" class="hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0.297C5.373 0.297 0 5.67 0 12.297c0 5.284 3.438 9.773 8.207 11.387.6.11.793-.26.793-.577v-2.234c-3.338.726-4.033-1.415-4.033-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.809 1.304 3.495.997.107-.776.418-1.305.762-1.605-2.665-.303-5.467-1.332-5.467-5.932 0-1.31.467-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.323 3.301 1.23a11.49 11.49 0 0 1 3.003-.404c1.018.005 2.043.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.655 1.653.243 2.874.12 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.807 5.625-5.479 5.921.43.37.823 1.103.823 2.222v3.293c0 .32.192.694.801.576C20.565 22.065 24 17.577 24 12.297 24 5.67 18.627.297 12 .297z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Project Card -->
+      <div class="w-full sm:w-[80%] md:w-[45%] lg:w-[30%] rounded-xl p-5 border border-gray-300 glow-card shadow-lg">
+        <!-- Image -->
+        <div class="overflow-hidden rounded-md">
+          <img src="img/Projectimages/simon-game.png" alt="Monster Hunt"
+            class="w-full h-auto transition-transform duration-300 hover:scale-105">
+        </div>
+
+        <!-- Title -->
+        <h2 class="mt-4 font-bold text-[25px] md:text-[25px]">Feel Free Share</h2>
+
+        <!-- Description -->
+        <p class="mt-2 text-[20px] md:text-[20px] ">
+          A file sharing web app where you can share files securely without login or signup. <br>
+        </p>
+
+        <!-- Tags + Icons -->
+        <div class="mt-6 flex justify-between items-center flex-wrap gap-3">
+          <!-- Tags -->
+          <div class="text-sm text--text-color">HTML CSS Node.js SQL</div>
+
+
+
+
+          <!-- Icons -->
+          <div class="flex items-center space-x-5">
+            <!-- External Link -->
+            <a href="#" target="_blank" class="hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818" class="h-6 w-6" fill="currentColor">
+                <g>
+                  <path
+                    d="M185.818 2.161h-57.04c-4.971 0-9 4.029-9 9s4.029 9 9 9h35.312l-86.3 86.3a9 9 0 006.364 15.364 8.975 8.975 0 006.364-2.636l86.3-86.3v35.313c0 4.971 4.029 9 9 9s9-4.029 9-9v-57.04a9 9 0 00-9-9.001z">
+                  </path>
+                  <path
+                    d="M149 77.201a9 9 0 00-9 9v88.456H18v-122h93.778c4.971 0 9-4.029 9-9s-4.029-9-9-9H9a9 9 0 00-9 9v140a9 9 0 009 9h140a9 9 0 009-9V86.201a9 9 0 00-9-9z">
+                  </path>
+                </g>
+              </svg>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com" target="_blank" class="hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0.297C5.373 0.297 0 5.67 0 12.297c0 5.284 3.438 9.773 8.207 11.387.6.11.793-.26.793-.577v-2.234c-3.338.726-4.033-1.415-4.033-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.809 1.304 3.495.997.107-.776.418-1.305.762-1.605-2.665-.303-5.467-1.332-5.467-5.932 0-1.31.467-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.323 3.301 1.23a11.49 11.49 0 0 1 3.003-.404c1.018.005 2.043.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.655 1.653.243 2.874.12 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.807 5.625-5.479 5.921.43.37.823 1.103.823 2.222v3.293c0 .32.192.694.801.576C20.565 22.065 24 17.577 24 12.297 24 5.67 18.627.297 12 .297z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Project Card -->
+      <div class="w-full sm:w-[80%] md:w-[45%] lg:w-[30%] rounded-xl p-5 border border-gray-300 glow-card shadow-lg">
+        <!-- Image -->
+        <div class="overflow-hidden rounded-md">
+          <img src="img/Projectimages/simon-game.png" alt="Monster Hunt"
+            class="w-full h-auto transition-transform duration-300 hover:scale-105">
+        </div>
+
+        <!-- Title -->
+        <h2 class="mt-4 font-bold text-[25px] md:text-[25px]">Feel Free Share</h2>
+
+        <!-- Description -->
+        <p class="mt-2 text-[20px] md:text-[20px] ">
+          A file sharing web app where you can share files securely without login or signup. <br>
+        </p>
+
+        <!-- Tags + Icons -->
+        <div class="mt-6 flex justify-between items-center flex-wrap gap-3">
+          <!-- Tags -->
+          <div class="text-sm text--text-color">HTML CSS Node.js SQL</div>
+
+
+
+
+          <!-- Icons -->
+          <div class="flex items-center space-x-5">
+            <!-- External Link -->
+            <a href="#" target="_blank" class="hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818" class="h-6 w-6" fill="currentColor">
+                <g>
+                  <path
+                    d="M185.818 2.161h-57.04c-4.971 0-9 4.029-9 9s4.029 9 9 9h35.312l-86.3 86.3a9 9 0 006.364 15.364 8.975 8.975 0 006.364-2.636l86.3-86.3v35.313c0 4.971 4.029 9 9 9s9-4.029 9-9v-57.04a9 9 0 00-9-9.001z">
+                  </path>
+                  <path
+                    d="M149 77.201a9 9 0 00-9 9v88.456H18v-122h93.778c4.971 0 9-4.029 9-9s-4.029-9-9-9H9a9 9 0 00-9 9v140a9 9 0 009 9h140a9 9 0 009-9V86.201a9 9 0 00-9-9z">
+                  </path>
+                </g>
+              </svg>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com" target="_blank" class="hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0.297C5.373 0.297 0 5.67 0 12.297c0 5.284 3.438 9.773 8.207 11.387.6.11.793-.26.793-.577v-2.234c-3.338.726-4.033-1.415-4.033-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.809 1.304 3.495.997.107-.776.418-1.305.762-1.605-2.665-.303-5.467-1.332-5.467-5.932 0-1.31.467-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.323 3.301 1.23a11.49 11.49 0 0 1 3.003-.404c1.018.005 2.043.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.655 1.653.243 2.874.12 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.807 5.625-5.479 5.921.43.37.823 1.103.823 2.222v3.293c0 .32.192.694.801.576C20.565 22.065 24 17.577 24 12.297 24 5.67 18.627.297 12 .297z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
 
       <!-- Project Card -->
       <div class="w-full sm:w-[80%] md:w-[45%] lg:w-[30%] rounded-xl p-5 border border-gray-300 glow-card shadow-lg">
@@ -373,21 +742,21 @@
 
 
   <!-- Contact -->
-  <div class="contact-1 contact w-screen flex items-center justify-center px-4 py-10 relative mt-15">
+  <div id="contact" class="contact-1 contact w-screen flex items-center justify-center px-4 py-10 relative mt-15">
     <div class="w-full max-w-md">
 
-      <form action="" method="POST" class="p-8 rounded-lg space-y-4">
+      <form action="" method="POST" id="contact-form" class="p-8 rounded-lg space-y-4">
 
         <h2 class="text-2xl font-bold mb-4 text-white">We need to talk!</h2>
 
-        <input type="text" placeholder="Your full name" required
-          class="w-full p-4 mb-4 rounded bg-white border-0 border-none focus:outline-none  transition duration-300">
+        <input type="text" name="name" placeholder="Your full name" required
+          class="w-full p-4 mb-4 rounded bg-white border-0 text-black border-none focus:outline-none  transition duration-300">
 
-        <input type="email" placeholder="example@xyz.com" required
-          class="w-full p-4 mb-4 rounded bg-white border-0 focus:border-3 border-none focus:outline-none  transition duration-300">
+        <input type="email" name="email" placeholder="example@xyz.com" required
+          class="w-full p-4 mb-4 rounded bg-white border-0 text-black focus:border-3 border-none focus:outline-none  transition duration-300">
 
-        <textarea rows="5" placeholder="Type your thought.." required
-          class="w-full p-4 mb-4 rounded bg-white border-0 border-none focus:outline-none transition duration-300"></textarea>
+        <textarea rows="5" name="message" placeholder="Type your thought.." required
+          class="w-full p-4 mb-4 rounded bg-white border-0 text-black border-none focus:outline-none transition duration-300"></textarea>
 
         <div class="flex justify-center">
           <button type="submit"
@@ -496,7 +865,7 @@
 
 
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
   const darkModeToggle = document.getElementById('modecheckbox');
   darkModeToggle.addEventListener('change', () => {
@@ -541,6 +910,23 @@
     closeIcon.classList.toggle('hidden');
   });
 
+
+   (function(){
+    emailjs.init("tVdEnShsy7vp7wa0N"); 
+  })();
+
+  // Form submit handling
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault(); 
+
+  emailjs.sendForm("Portfolio", "template_taw0uwi", this)
+  .then(function(response) {
+    alert("✅ Message sent successfully! We will get back to you soon. We truly appreciate your time! 😊");
+  }, function(error) {
+    alert("❌ Failed to send the message at the moment. Please contact us at 📧 shrikantkus26@gmail.com\n\nError Details: " + error);
+  });
+
+  });
 
 
 </script>
