@@ -8,7 +8,7 @@ import NGINX from '../assets/icon/nginx.svg';
 import REACTICON from '../assets/icon/react.svg';
 import HTML from '../assets/icon/HTML.svg';
 import JS from '../assets/icon/JS.svg';
-import AWS from '../assets/icon/aws.svg';
+import AWS from '../assets/icon/AWS.svg';
 import CSS from '../assets/icon/CSS.svg';
 import NEXTJS from '../assets/icon/nextjs.svg';
 import MYSQL from '../assets/icon/mysql.svg';
@@ -177,4 +177,5 @@ export const Skils = () => {
             </div>
         </section>
     );
+
 };
