@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Navbar } from './components/Navbar';
 import About from "./components/About";
 import { SocialMedia } from './components/SocialMedia';
-import { Skils } from './components/Skils';
+import { Experience } from './components/Experience';
 import { Contect } from './components/Contect';
 import { Footer } from './components/Footer';
 import { Projects } from './components/Projects';
@@ -34,7 +34,7 @@ function App() {
         viewport={{ once: false, amount: window.innerWidth < 768 ? 0.1 : 0.3 }}
         variants={sectionVariants}
       >
-        <Skils darkMode={darkMode} />
+        <Experience darkMode={darkMode} />
       </motion.div>
 
 
