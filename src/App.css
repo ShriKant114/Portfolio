@@ -1,0 +1,76 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --header-bg: #f0f0f0;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --main-color: rgb(21, 72, 225);
+    --curent-color: #000000;
+    --current-color-line: rgb(176, 176, 176);
+}
+
+body.dark {
+    --bg-color: rgb(0, 0, 0);
+    --text-color: #ffffff;
+    --header-bg: #1e1e1e;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+    --main-color: rgb(216, 148, 23);
+    --current-color: #ffffff;
+    --current-color-line: rgb(255, 255, 255);
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navname {
+    color: var(--main-color);
+    transition: color 0.3s ease;
+    letter-spacing: 5px;
+}
+
+.hero-1 {
+    /* Animation start state */
+    transform: translateX(-100px);
+    opacity: 0;
+
+    /* Animation on load */
+    animation: slideInFromLeft 0.9s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+.glow-card {
+    width: 371px;
+    height: 450px;
+    box-shadow: 0 0 5px 5px rgb(219, 229, 255);
+    overflow: hidden;
+}
+
+.image-container {
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.image-hover {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+.image-container:hover .image-hover {
+    transform: scale(1.1);
+    /* zoom 10% */
+}
+
+
+
