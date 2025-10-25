@@ -20,7 +20,7 @@ export const Skils = () => {
   className="flex flex-col justify-center items-center px-5 sm:px-10 md:px-25 py-6 mt-15"
 >
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">Skills</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">Experience</h2>
             <div className="flex flex-wrap justify-center gap-6 max-w-6xl">
                 <div className="flex flex-col items-center">
                     <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-125">

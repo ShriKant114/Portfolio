@@ -15,7 +15,7 @@ const About = () => {
           }
           .animate-float {
             animation: float 4s ease-in-out infinite;
-          }
+          } 
         `}
       </style>
 
@@ -26,44 +26,46 @@ const About = () => {
                         pointer-events-none z-10">
         </div>
 
-        <div
-          id="about"
-          className="relative z-20 flex flex-col-reverse lg:flex-row items-center justify-between
-                     px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 gap-8 lg:gap-12
-                     md:ml-20 lg:ml-24 2xl:ml-32"
-        >
-          {/* Left Side: Text */}
-          <div className="w-full lg:w-1/2 flex flex-col mt-5 lg:mt-25 items-center lg:items-start text-center lg:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#e7008a] via-purple-500 to-blue-600 text-transparent bg-clip-text">
-              Hi, I'm
-            </h1>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mt-4">
-              SHRIKANT
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mt-4 lg:mt-6">
-              <span className="block mb-2">I'm a Full-Stack Web Developer</span>
-              <span className="block mb-2">& exploring the world of</span>
-              <span className="flex lg:justify-start justify-center items-center">
-                AI
-                <img
-                  src={neuralNetworkIcon}
-                  alt="Neural Network"
-                  className="w-7 h-7 ml-2"
-                />
-              </span>
-            </p>
-          </div>
+        {/* Container with 10% left/right space */}
+        <div className="relative z-20 flex justify-center px-[5%]">
+          <div
+            id="about"
+            className="flex flex-col-reverse lg:flex-row items-center justify-center gap-8 lg:gap-30 max-w-full"
+          >
+            {/* Left Side: Text */}
+            <div className="w-full lg:w-7/12 flex flex-col mt-5 lg:mt-15 items-center lg:items-start text-center lg:text-left">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#e7008a] via-purple-500 to-blue-600 text-transparent bg-clip-text">
+                Hi, I'm
+              </h1>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mt-4">
+                SHRIKANT
+              </h2>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl mt-4 lg:mt-6">
+                <span className="block mb-2">I'm a Full-Stack Web Developer</span>
+                <span className="block mb-2">& exploring the world of</span>
+                <span className="flex lg:justify-start justify-center items-center">
+                  AI
+                  <img
+                    src={neuralNetworkIcon}
+                    alt="Neural Network"
+                    className="w-7 h-7 ml-2"
+                  />
+                </span>
+              </p>
+            </div>
 
-          {/* Right Side: Larger Circle with floating + hover zoom */}
-          <div className="w-full lg:w-1/2 flex justify-center items-center mt-20 lg:mt-20">
-            <div className="w-64 sm:w-72 md:w-80 lg:w-96 2xl:w-[34rem] h-64 sm:h-72 md:h-80 lg:h-96 2xl:h-[34rem]
+            {/* Right Side: Floating Image */}
+            <div className="w-full lg:w-5/12 flex justify-center items-center mt-16 lg:mt-20 ml-0 lg:ml-20">
+              <div className="w-56 sm:w-72 md:w-72 lg:w-80 2xl:w-96
+                  h-56 sm:h-72 md:h-72 lg:h-80 2xl:h-96
                   rounded-full overflow-hidden border-white dark:border-gray-600 shadow-2xl
                   flex items-center justify-center animate-float transition-transform duration-500 hover:scale-110">
-              <img
-                src={aboutImg}
-                alt="Shrikant"
-                className="w-full h-full object-cover"
-              />
+                <img
+                  src={aboutImg}
+                  alt="Shrikant"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
