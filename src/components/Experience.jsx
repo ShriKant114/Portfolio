@@ -15,10 +15,10 @@ import MYSQL from '../assets/icon/mysql.svg';
 
 const Experience = () => {
     return (
-       <section
-  id="skills"
-  className="flex flex-col justify-center items-center px-5 sm:px-10 md:px-25 py-6 mt-15"
->
+        <section
+            id="experience"
+            className="flex flex-col justify-center items-center px-5 sm:px-10 md:px-25 py-6 mt-15"
+        >
 
             <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">Experience</h2>
             <div className="flex flex-wrap justify-center gap-6 max-w-6xl">

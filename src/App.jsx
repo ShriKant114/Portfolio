@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { Navbar } from './components/Navbar';
 import About from "./components/About";
 import { SocialMedia } from './components/SocialMedia';
-import { Experience } from './components/Experience';
+import Experience from "./components/Experience.jsx";
+
 import { Contect } from './components/Contect';
 import { Footer } from './components/Footer';
 import { Projects } from './components/Projects';

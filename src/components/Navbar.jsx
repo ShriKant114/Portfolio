@@ -16,7 +16,7 @@ export const Navbar = ({ darkMode, setDarkMode }) => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-8 text-[18px] md:text-[22px] font-code">
             <a href="#about" className="hover:text-gray-400">About</a>
-            <a href="#Experience" className="hover:text-gray-400">Experience</a>
+            <a href="#experience" className="hover:text-gray-400">Experience</a>
             <a href="#project" className="hover:text-gray-400">Project</a>
             <a href="#contact" className="hover:text-gray-400">Contact</a>
           </div>
@@ -71,7 +71,7 @@ export const Navbar = ({ darkMode, setDarkMode }) => {
         {mobileMenuOpen && (
           <div className="absolute top-[75px] left-0 w-full bg-white dark:bg-gray-900 text-black dark:text-white flex flex-col gap-4 py-4 text-lg font-bold text-center shadow-lg z-40">
             <a href="#about" className="hover:text-gray-500" onClick={() => setMobileMenuOpen(false)}>About</a>
-            <a href="#Experience" className="hover:text-gray-500" onClick={() => setMobileMenuOpen(false)}>Experience</a>
+            <a href="#experience" className="hover:text-gray-500" onClick={() => setMobileMenuOpen(false)}>Experience</a>
             <a href="#project" className="hover:text-gray-500" onClick={() => setMobileMenuOpen(false)}>Project</a>
             <a href="#contact" className="hover:text-gray-500" onClick={() => setMobileMenuOpen(false)}>Contact</a>
           </div>

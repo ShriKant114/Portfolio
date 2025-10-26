@@ -23,8 +23,8 @@ export const projectsData = [
     title: "AI Interviewer",
     description: "AI-powered interviewer system for practicing real-life job interviews.",
     tags: "Gemini API Pinecone MongoDB",
-    liveLink: "#", // Agar live version nahi hai
-    githubLink: "https://github.com/ShriKant114/AI-Interviewer",
+    liveLink: "https://interviewiq.shrikant.dev/", // Agar live version nahi hai
+    githubLink: "https://interviewiq.shrikant.dev/",
   },
   {
     image: secureimage,
@@ -32,7 +32,7 @@ export const projectsData = [
     title: "Secure Image",
     description: "Hide secure and encrypted message inside image using steganography.",
     tags: "Python Steganography",
-    liveLink: "https://steganography-shrikant.onrender.com/",
+    liveLink: "https://secureimage.shrikant.dev/",
     githubLink: "https://github.com/ShriKant114/Steganography-Mssage-Hiding",
   },
   {
