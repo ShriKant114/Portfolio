@@ -13,7 +13,7 @@ import CSS from '../assets/icon/CSS.svg';
 import NEXTJS from '../assets/icon/nextjs.svg';
 import MYSQL from '../assets/icon/mysql.svg';
 
-export const Skils = () => {
+export const Experience = () => {
     return (
        <section
   id="skills"
@@ -179,3 +179,4 @@ export const Skils = () => {
     );
 
 };
+
