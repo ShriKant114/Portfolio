@@ -1,7 +1,7 @@
 import feelfreeshare from "../assets/projects/feelfreeshare.png";
 import event from "../assets/projects/event.png";
 import secureimage from "../assets/projects/stego.png";   
-import bloodsetu from "../assets/projects/bloodsetu.png";
+import rgpvresult from "../assets/projects/rgpvresult.png";
 import shoppingwebsite from "../assets/projects/shoping.png";
 import aiinterviewer from "../assets/projects/aiinterviewer.png";
 import automatedgame from "../assets/projects/dino.png";
@@ -36,13 +36,13 @@ export const projectsData = [
     githubLink: "https://github.com/ShriKant114/Steganography-Mssage-Hiding",
   },
   {
-    image: bloodsetu,
-    alt: "Blood-Setu",
-    title: "Blood-Setu",
-    description: "A platform connecting people to find blood near their location.",
-    tags: "React Node.js MongoDB Express.js",
-    liveLink: "https://bloodsetu.vercel.app/",
-    githubLink: "https://github.com/ShriKant114/Blood-Setu",
+    image: rgpvresult,
+    alt: "rgpvresult",
+    title: "Rgpv result Scraper",
+    description: "A platform that provides the complete class results.",
+    tags: "React.js Python FastApi OCR Web Scraping",
+    liveLink: "https://www.shrikant.dev/",
+    githubLink: "https://github.com/ShriKant114/RGPV_Result_In_1_Click",
   },
   {
     image: shoppingwebsite,
@@ -72,3 +72,4 @@ export const projectsData = [
     githubLink: "https://github.com/ShriKant114/Automate_chrome_dino_game",
   },
 ];
+
