@@ -40,7 +40,7 @@ export const projectsData = [
     alt: "rgpvresult",
     title: "Rgpv result Scraper",
     description: "A platform that provides the complete class results.",
-    tags: "React.js Python FastApi OCR Web Scraping",
+    tags: "Python FastApi OCR Web Scraping",
     liveLink: "https://www.shrikant.dev/",
     githubLink: "https://github.com/ShriKant114/RGPV_Result_In_1_Click",
   },
@@ -72,4 +72,5 @@ export const projectsData = [
     githubLink: "https://github.com/ShriKant114/Automate_chrome_dino_game",
   },
 ];
+
 
