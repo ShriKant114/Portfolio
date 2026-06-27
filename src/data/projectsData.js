@@ -14,7 +14,7 @@ export const projectsData = [
     description:
       "File sharing web app, you can share files securely without login or signup.",
     tags: "HTML CSS Node.js SQL",
-    liveLink: "https://feelfreeshare-shrikant.onrender.com/",
+    liveLink: "https://feelfreeshare.shrikant.dev/",
     githubLink: "https://github.com/ShriKant114/FeelFreeShare",
   },
   {
