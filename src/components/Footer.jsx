@@ -60,7 +60,7 @@ export const Footer = ({ darkMode = false }) => {
       </div>
 
       <p className="text-[18px] text-color text-sm flex flex-col sm:flex-row justify-center items-center gap-1">
-        <span>Copyright © Shrikant Kushwaha</span>
+        <span>Copyright © Shrikant </span>
         <span className="hidden sm:inline">|</span>
         <span>Made with 💖 in India.</span>
       </p>
